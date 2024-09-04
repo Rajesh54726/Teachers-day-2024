@@ -92,13 +92,17 @@ a:hover {
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .professor-card img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin: 20px;
+  width: 100%; /* Make the image take up the full width of its container */
+  height: auto; /* Maintain the aspect ratio */
+  max-width: 300px; /* Limit the maximum width to 300px (or any desired value) */
+  max-height: 300px; /* Limit the maximum height to 300px (or any desired value) */
+  border-radius: 10px; /* Adjust border-radius for a slight rounding */
+  margin: 0 auto; /* Center align the image */
+  display: block;
 }
 
 .professor-card h3 {
@@ -110,6 +114,7 @@ a:hover {
   font-size: 18px;
   margin-bottom: 20px;
 }
+
 /* Schedule Section Styles */
 
 .schedule {
