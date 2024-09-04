@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher's Day Invitation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Teacher's Day Invitation</h1>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Celebrating Our Amazing Teachers</h2>
+        <p>You are the guiding light that shapes young minds and inspires greatness. We are grateful for your dedication and hard work.</p>
+        <button class="btn-primary">Explore</button>
+      </div>
+    </section>
+    <section class="professors">
+      <div class="container">
+        <h2>Meet Our Professors from the Department of Earth Science, Sambalpur University</h2>
+        <div class="professor-grid">
+          <div class="professor-card">
+            <img src="dr-duryadhan-behera.jpg" alt="Dr. Duryadhan Behera">
+            <h3>Dr. Duryadhan Behera</h3>
+            <p>Department of Earth Science, Sambalpur University</p>
+          </div>
+          <div class="professor-card">
+            <img src="dr-haridas-mohanta.jpg" alt="Dr. Haridas Mohanta">
+            <h3>Dr. Haridas Mohanta</h3>
+            <p>Department of Earth Science, Sambalpur University</p>
+          </div>
+          <div class="professor-card">
+            <img src="dr-jagadish-behera.jpg" alt="Dr. Jagadish Behera">
+            <h3>Dr. Jagadish Behera</h3>
+            <p>Department of Earth Science, Sambalpur University</p>
+          </div>
+          <div class="professor-card">
+            <img src="dr-asim-pratihari.jpg" alt="Dr. Asim Pratihari">
+            <h3>Dr. Asim Pratihari</h3>
+            <p>Department of Earth Science, Sambalpur University</p>
+          </div>
+          <div class="professor-card">
+            <img src="mr-manas-ranjan-jena.jpg" alt="Mr. Manas Ranjan Jena">
+            <h3>Mr. Manas Ranjan Jena</h3>
+            <p>Department of Earth Science, Sambalpur University</p>
+          </div>
+          <div class="professor-card">
+            <img src="mr-debashis-sahoo.jpg" alt="Mr. Debashis Sahoo">
+            <h3>Mr. Debashis Sahoo</h3>
+            <p>Department of Earth Science, Sambalpur University</p>
+          </div>
+          <div class="professor-card">
+            <img src="ms-krishna-manjari-jena.jpg" alt="Ms. Krishna Manjari Jena">
+            <h3>Ms. Krishna Manjari Jena</h3>
+            <p>Department of Earth Science, Sambalpur University</p>
+          </div>
+          <div class="professor-card">
+            <img src="mrs-priyanka-sahoo.jpg" alt="Mrs. Priyanka Sahoo">
+            <h3>Mrs. Priyanka Sahoo</h3>
+            <p>Department of Earth Science, Sambalpur University</p>
+          </div>
+          <div class="professor-card">
+            <img src="dr-asmita-mohanty.jpg" alt="Dr. Asmita Mohanty">
+            <h3>Dr. Asmita Mohanty</h3>
+            <p>Department of Earth Science, Sambalpur University</p>
+          </div>
+          <div class="professor-card">
+            <img src="mr-paresh-ranjan-das.jpg" alt="Mr. Paresh Ranjan Das">
+            <h3>Mr. Paresh Ranjan Das</h3>
+            <p>Department of Earth Science, Sambalpur University</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="schedule">
+      <div class="container">
+        <h2>Schedule of Events</h2>
+        <ul>
+          <li>9:00 am - 10:00 am: Welcome and Registration</li>
+          <li>10:00 am - 11:00 am: Keynote Address</li>
+          <li>11:00 am - 12:00 pm: Cultural Program</li>
+          <li>12:00 pm - 1:00 pm: Lunch Break</li>
+          <li>1:00 pm - 2:00 pm: Award Ceremony</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 Sambalpur University</p>
+  </footer>
+
+  <!-- Add animations using JavaScript -->
+  <script>
+    // Animate hero section
+    document.addEventListener("DOMContentLoaded", function() {
+      const hero = document.querySelector(".hero");
+      hero.classList.add("animate");
+    });
+<!-- Professor Grid Toggle Button -->
+<button id="professor-grid-toggle">Toggle Professor Grid</button>
+
+<!-- Professor Grid Container -->
+<div class="professor-grid">
+  <!-- Professor Cards will be rendered here -->
+</div>
+
+<!-- Professor Card Template -->
+<script type="text/template" id="professor-card-template">
+  <div class="professor-card">
+    <img src="${image}" alt="${name}">
+    <h3>${name}</h3>
+    <p>${description}</p>
+  </div>
+</script>
+
+<!-- Professor Data -->
+<script>
+  var professors = [
+    {
+      name: "John Doe",
+      image: "john-doe.jpg",
+      description: "Professor of Computer Science"
+    },
+    {
+      name: "Jane Smith",
+      image: "jane-smith.jpg",
+      description: "Professor of Mathematics"
+    },
+    // Add more professors here
+  ];
+</script>
+
+<!-- Render Professor Cards -->
+<script>
+  var professorGrid = document.querySelector('.professor-grid');
+  var professorCardTemplate = document.getElementById('professor-card-template').innerHTML;
+
+  professors.forEach(function(professor) {
+    var professorCardHTML = professorCardTemplate
+      .replace("${image}", professor.image)
+      .replace("${name}", professor.name)
+      .replace("${description}", professor.description);
+
+    professorGrid.innerHTML += professorCardHTML;
+  });
+</script>
+<!-- Add professor grid -->
+<section class="professor-grid">
+  <div class="container">
+    <h2>Meet Our Professors</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="professor-card">
+          <img src="professor1.jpg" alt="Professor 1">
+          <h3>Professor John Doe</h3>
+          <p>Department of Computer Science</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="professor-card">
+          <img src="professor2.jpg" alt="Professor 2">
+          <h3>Professor Jane Smith</h3>
+          <p>Department of Mathematics</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="professor-card">
+          <img src="professor3.jpg" alt="Professor 3">
+          <h3>Professor Bob Johnson</h3>
+          <p>Department of Physics</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    // Animate professor cards
+    document.addEventListener("DOMContentLoaded", function() {
+      const professorCards = document.querySelectorAll(".professor-card");
+      professorCards.forEach((card) => {
+        card.addEventListener("mouseover", function() {
+          card.classList.add("animate");
+        });
+        card.addEventListener("mouseout", function() {
+          card.classList.remove("animate");
+        });
+      });
+    });
+  </script>
+</body>
+</html>
